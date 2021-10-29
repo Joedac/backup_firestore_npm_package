@@ -1,6 +1,8 @@
 
 # backup_firestore_database
 
+https://www.npmjs.com/package/backup_firestore_database
+
 backup your firestore collection into a json &amp; save each item in a 'backup collection'.
 
 
