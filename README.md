@@ -13,7 +13,7 @@ backup your firestore collection into a json &amp; save each item in a 'backup c
 
 - copy json in the project folder
 
-Install backup_firestore with npm
+Install backup_firestore_database with npm
 
 ```bash
   npm install backup_firestore_database

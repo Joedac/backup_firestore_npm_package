@@ -3,6 +3,10 @@
   "name": "backup_firestore_database",
   "version": "1.0.6",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Joedac/backup_firestore_npm_package"
+  },
   "keywords": [
     "firestore",
     "firebase",
