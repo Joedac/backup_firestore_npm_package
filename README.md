@@ -43,6 +43,12 @@ backup.backupCollectionToJson(db, 'my_collection');
 //copy backup.json into 'backup' collection 
 backup.backupCollection(db, 'my_collection', 'backup');
 ```
+## Copy backup.json to collection
+
+```javascript
+//copy backup.json into 'backup' collection 
+saveBackupToFirestore(db, 'my_collection');
+```
 
 ## Delete 'backup' collection
 

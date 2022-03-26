@@ -27,6 +27,14 @@ exports.backupCollectionToJson = function (db, collection) {
 exports.deleteBackupCollection = function (db, backupCollection) {
     utils.deleteCollection(db, backupCollection);
 };
+/**
+ * copy json to database
+ * @param db
+ * @param collection
+ */
+exports.backupJsonToCollection = function (db, collection) {
+    utils.saveBackupToFirestore(db, collection);
+}
 
 /**
  * Initialize admin SDK using serciceAcountKey
@@ -45,5 +53,3 @@ exports.init = function (key) {
     db.settings({ignoreUndefinedProperties: true});
     return db;
 };
-
-
