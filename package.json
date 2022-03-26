@@ -1,7 +1,7 @@
 {
   "author": "joedac",
   "name": "backup_firestore_database",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "repository": {
     "type": "git",
