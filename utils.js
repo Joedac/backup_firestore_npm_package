@@ -8,7 +8,6 @@ async function backupCollectionToJson(db, collection) {
     const snapshot = await db.collection(collection).get().catch(e => console.log('Error: ', e.message));
     if (snapshot.empty) {console.log('Collection not exist, abort writing json');return;}
     let backup = snapshot.docs.map(doc => doc.data());
-    this.countWrite = snapshot.docs.length;
     fs.writeFile("backup.json", JSON.stringify(backup, null, 2),
         (err) => {
             if (err)
@@ -26,8 +25,6 @@ async function saveBackupToFirestore(db, collection) {
     await fs.readFile('backup.json', (err, json) => {
         if (err) throw err;
         let backup = JSON.parse(json);
-        let countRead = backup.length;
-        if (this.countWrite !== countRead) throw  new Error('countWrite and countRead does not match !');
         backup.forEach(function (item) {
             db.collection(collection).doc().set(item)
                 .then(function (docRef) {
