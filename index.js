@@ -27,7 +27,7 @@ exports.backupCollection = function (db, myCollection, backupCollection) {
  * @param collection
  */
 exports.backupCollectionToJson = function (db, collection) {
-    readline.question(`Are you sure you want to make a backup of ${myCollection} in backup.json ?[yes]/no : `, async function (answer) {
+    readline.question(`Are you sure you want to make a backup of ${collection} in backup.json ?[yes]/no : `, async function (answer) {
         if (answer === 'no') {
             console.log("Ok, bye.");
             process.exit(1);
